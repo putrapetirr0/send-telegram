@@ -53,5 +53,5 @@ send_file() {
 }
 send_file "$1" "Thank You For Using Our Service
 Tanggal Backup : $DATE
-IP VPS         : $IP" > /dev/null
+Your IP VPS    : $IP" > /dev/null
 echo " ${ON_BLUE} cek file di telegram grup.... ${STD}"

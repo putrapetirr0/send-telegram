@@ -52,6 +52,6 @@ send_file() {
  -F "caption=$caption"
 }
 send_file "$1" "Thank You For Using Our Service
-                Tanggal Backup : $DATE
-                IP VPS         : $IP" > /dev/null
-echo " ${ON_BLUE} File Upload Complete ${STD}"
+Tanggal Backup : $DATE
+IP VPS         : $IP" > /dev/null
+echo " ${ON_BLUE} cek file di telegram grup.... ${STD}"

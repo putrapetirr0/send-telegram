@@ -1,6 +1,8 @@
 
 #!/bin/bash
 # Get date and time
+
+IP=$(wget -qO- ipinfo.io/ip);
 DATE=$(date +"%m-%d-%y")
 ######################### Colours ############################
 ON_BLUE=$(echo -e "\033[44m")
@@ -23,12 +25,12 @@ BOT_TOKEN="6909238277:AAFhcwhYffeDVvg3iYRFRikyGrt6XfE-3vc"
 CHAT_ID="-1002089645998"
 file_path=""
 # Function to send a message to Telegram
-send_message() {
- local message="$1"
- curl -s -X POST "https://api.telegram.org/bot$BOT_TOKEN/sendMessage" \
- -d "chat_id=$CHAT_ID" \
- -d "text=$message"
-}
+#send_message() {
+ #local message="$1"
+ #curl -s -X POST "https://api.telegram.org/bot$BOT_TOKEN/sendMessage" \
+ #-d "chat_id=$CHAT_ID" \
+ #-d "text=$message"
+#}
 send_message "Hi I'm your bot to send files.. UPLOADING here…"
 echo " "
 echo "_____________________________________"
@@ -49,7 +51,7 @@ send_file() {
  -F "document=@$file_path" \
  -F "caption=$caption"
 }
-send_file "$1" "Your file is here." > /dev/null
+send_file "$1" "Thank You For Using Our Service
+                Tanggal Backup : $DATE
+                IP VPS         : $IP" > /dev/null
 echo " ${ON_BLUE} File Upload Complete ${STD}"
-send_file "$1" "Your file2 is here." > /dev/null
-echo " ${ON_BLUE} File2 Upload Complete ${STD}"

@@ -10,6 +10,9 @@ RED=$(echo -e "\033[1;31m")
 BLUE=$(echo -e "\033[1;34m")
 GREEN=$(echo -e "\033[1;32m")
 STD=$(echo -e "\033[0m") # Clear colour
+vmesslink1="vmess://$(echo $acs | base64 -w 0)"
+vmesslink2="vmess://$(echo $ask | base64 -w 0)"
+vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
 ##############################################################
 echo "_____________________________________"
 echo " "

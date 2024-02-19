@@ -35,7 +35,10 @@ send_message() {
  -d "chat_id=$CHAT_ID" \
  -d "text=$message"
 }
-send_message "Hi I'm your bot to send files.. UPLOADING here…"
+send_message "${user}
+${vmesslink1}
+${vmesslink2}
+${vmesslink3}"
 echo " "
 echo "_____________________________________"
 echo " "
